@@ -1,1 +1,1 @@
-web: python app/manage.py collectstatic --noinput
+web: python manage.py collectstatic --noinput
