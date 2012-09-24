@@ -1,20 +1,38 @@
-<h1>Encuesta</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
 
-<form action="/process/" method="post">
-{% csrf_token %}
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Consulta</title>
 
-    <label for="num_lawyers">Abogados que trabajan en su oficina: </label>
-    <input type="text" name="num_lawyers"><br>
+  <style type="text/css"></style>
+  {% load staticfiles %}
+  <!-- <link rel="stylesheet" href="style.css" type="text/css"> -->
+  <link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css">
 
-    <label for="answer1">Cual considera que es el aspecto de su trabajo que mas se podria mejorar</label><br>
-    <textarea name="answer1"></textarea><br>
-
-    <label for="answer2">Cual considera que es el aspecto de su trabajo que mas convendria automatizar</label>
+</head>
+<body>
+<form>
+  <div class="box">
+  	<h1>Preguntas:</h1>
+  	<label>
+		<span># de abogados que trabajan en su oficina</span>
+		<input class="input_text" name="num_lawyers" id="num_lawyers" type="text">
     <br>
-    <textarea name="answer2"></textarea><br>
-
-    <label for="email">e-mail: </label>
-    <input type="text" name="email"><br>
-
-<input type="submit" value="Enviar" />
+	</label>
+	<label>
+		<span>&iquest;Cual considera que es el aspecto de su trabajo que mas se podria mejorar?</span>
+		<textarea class="message" name="answer1" id="answer1"></textarea>
+	</label>
+	<label> <span>&iquest;Cual considera que es el aspecto de su trabajo que mas convendria automatizar?</span>
+		<textarea class="message" name="answer2" id="answer2"></textarea>
+	</label>
+    <label>
+        <span>e-mail</span>
+        <input class="input_text" name="email" id="email" type="text"><br>
+        <input class="button" value="Enviar" type="button">
+    </label>
+   </div>
 </form>
+
+</body></html>
