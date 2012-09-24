@@ -2,6 +2,7 @@
 import os
 import dj_database_url
 
+PROJECT_PATH = os.path.dirname(os.path.abspath(__file__))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -64,7 +65,10 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = '/home/pakiko/django/guayaba_survey/STATIC_ROOT'
+#STATIC_ROOT = '/home/pakiko/django/guayaba_survey/STATIC_ROOT'
+STATIC_ROOT = os.path.abspath(os.path.join(PROJECT_PATH, 'collected_static'))
+
+print STATIC_ROOT
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -117,7 +121,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'templates'))
+    os.path.abspath(os.path.join(PROJECT_PATH, '..', 'templates'))
 )
 
 INSTALLED_APPS = (
