@@ -1,5 +1,7 @@
 # Django settings for survey project.
 import os
+import dj_database_url
+
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -10,17 +12,21 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        #'NAME': '/home/pakiko/django/survey/survey.db',                      # Or path to database file if using sqlite3.
-        'NAME': os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'survey.db')),
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
-    }
-}
+#DATABASES = {'default': dj_database_url.config(default='postgres://postgres:12345@localhost/survey_db')}
+DATABASES = {'default': dj_database_url.config(default='postgres://localhost')}
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',  # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+#         #'NAME': '/home/pakiko/django/survey/survey.db',                      # Or path to database file if using sqlite3.
+#         #'NAME': os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'survey.db')),
+#         'NAME': 'survey_db',
+#         'USER': 'postgres',                      # Not used with sqlite3.
+#         'PASSWORD': '12345',                  # Not used with sqlite3.
+#         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+#         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+#     }
+# }
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
