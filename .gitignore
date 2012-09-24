@@ -4,4 +4,4 @@
 local_settings.py
 survey.db
 /venv
-/STATIC_ROOT
+/survey/collected_static
