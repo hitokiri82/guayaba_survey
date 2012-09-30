@@ -12,7 +12,9 @@ class Visit(models.Model):
 
 
 class Text(models.Model):
-    language = models.CharField(max_length=2)
+    comp_pk = models.CharField(max_length=8, primary_key=True)
+    id = models.CharField(max_length=3)
+    locale = models.CharField(max_length=5)
     content = models.TextField()
 
     def __unicode__(self):
@@ -20,7 +22,12 @@ class Text(models.Model):
 
 
 class Question(models.Model):
-    q_type = models.CharField(max_length=1)
+    QUESTION_TYPES = (
+        (u'M', u'Multiple Choice'),
+        (u'T', u'Text Area'),
+        (u'I', u'Text Input'),
+    )
+    q_type = models.CharField('Question Type', max_length=1, choices=QUESTION_TYPES)
     order = models.IntegerField()
     textID = models.ForeignKey(Text, verbose_name="Text of the question")
 

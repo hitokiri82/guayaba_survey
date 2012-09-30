@@ -68,8 +68,6 @@ MEDIA_URL = ''
 #STATIC_ROOT = '/home/pakiko/django/guayaba_survey/STATIC_ROOT'
 STATIC_ROOT = os.path.abspath(os.path.join(PROJECT_PATH, 'collected_static'))
 
-print STATIC_ROOT
-
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
@@ -81,8 +79,6 @@ STATICFILES_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     #os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'static')),
 )
-
-#print STATICFILES_DIRS
 
 # List of finder classes that know how to find static files in
 # various locations.
