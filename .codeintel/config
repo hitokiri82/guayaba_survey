@@ -1,0 +1,8 @@
+{
+    "Python": {
+        "python": '/usr/bin/python',
+        "pythonExtraPaths": [
+            "~/django/guayaba_survey/venv/lib/python2.7/site-packages"
+        ]
+    }
+}
