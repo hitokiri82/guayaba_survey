@@ -2,6 +2,7 @@
 *.pot
 *.pyc
 local_settings.py
+survey.sublime-workspace
 survey.db
 /venv
 /survey/collected_static

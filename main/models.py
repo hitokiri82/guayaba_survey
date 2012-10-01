@@ -1,7 +1,47 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from django.db import models
+from django.forms import ModelForm
 
+TIMES_OF_DAY = (
+    (u'01', u'Mañana'),
+    (u'02', u'Tarde'),
+)
 
-LOCALES = ((u'es_ES', u'es_ES'), (u'en_US', u'en_US'))
+TIME_MANAGING = (
+    (u'01', u'Menos de 1 Hora'),
+    (u'02', u'Menos de 3 Horas'),
+    (u'03', u'Mas de 3 Horas'),
+)
+
+BOOLEAN_OP = (
+    (u'Y', u'Si'),
+    (u'N', u'No'),
+)
+
+CHARGE_MODES = (
+    (u'01', u'Por horas'),
+    (u'02', u'Por asunto'),
+    (u'03', u'Por retainer'),
+)
+
+TIME_KEEPER = (
+    (u'01', u'Yo mismo'),
+    (u'02', u'Mi asistente/secretaria'),
+    (u'03', u'Mi jefe/supervisor'),
+)
+
+QUESTIONS_TEXTS = {
+    "Q01": "Cuáles cree usted que son las horas más productivas de su jornada laboral?",
+    "Q02": "Por qué?",
+    "Q03": "Qué tiempo aproximado dedica diariamente a organizar documentos, expedientes y su agenda?",
+    "Q04": "Quien gestiona su agenda?",
+    "Q05": "Utiliza o ha utilizado alguna herramienta informática que le ayude a gestionar su tiempo?",
+    "Q06": "Qué aspecto de su trabajo considera que puede mejorar?",
+    "Q07": "De qué forma suele facturar su trabajo?",
+    "Q08": "Tiene usted control efectivo del tiempo/dinero que invierte en cada cliente?",
+    "Q09": "Cuántos abogados trabajan en su despacho?",
+}
 
 
 class Visit(models.Model):
@@ -9,62 +49,21 @@ class Visit(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     country = models.TextField()
     city = models.TextField()
+    q01 = models.CharField(QUESTIONS_TEXTS['Q01'], max_length=2, choices=TIMES_OF_DAY)
+    q02 = models.TextField(QUESTIONS_TEXTS['Q02'])
+    q03 = models.CharField(QUESTIONS_TEXTS['Q03'], max_length=2, choices=TIME_MANAGING)
+    q04 = models.CharField(QUESTIONS_TEXTS['Q04'], max_length=1, choices=TIME_KEEPER)
+    q05 = models.CharField(QUESTIONS_TEXTS['Q05'], max_length=1, choices=BOOLEAN_OP)
+    q06 = models.TextField(QUESTIONS_TEXTS['Q06'])
+    q07 = models.CharField(QUESTIONS_TEXTS['Q07'], max_length=2, choices=CHARGE_MODES)
+    q08 = models.CharField(QUESTIONS_TEXTS['Q08'], max_length=1, choices=BOOLEAN_OP)
+    q09 = models.IntegerField(QUESTIONS_TEXTS['Q09'])
 
     def __unicode__(self):
         return unicode(self.id) + " " + self.ip_address
 
 
-class Question(models.Model):
-    QUESTION_TYPES = (
-        (u'M', u'Multiple Choice'),
-        (u'T', u'Text Area'),
-        (u'I', u'Text Input'),
-    )
-    q_type = models.CharField('Question Type', max_length=1, choices=QUESTION_TYPES)
-    order = models.IntegerField()
-    canonical = models.CharField(max_length=50)
-
-    def __unicode__(self):
-        return self.canonical
-
-
-class Question_Text(models.Model):
-    locale = models.CharField(max_length=5, choices=LOCALES)
-    content = models.TextField()
-    question = models.ForeignKey(Question)
-
+class VisitForm(ModelForm):
     class Meta:
-        verbose_name = "Question Text"
-        verbose_name_plural = "Question Texts"
-
-    def __unicode__(self):
-        return self.content
-
-
-class Option_Text(models.Model):
-    locale = models.CharField(max_length=5)
-    content = models.TextField()
-
-    def __unicode__(self):
-        return self.content
-
-
-class Option(models.Model):
-    question = models.ForeignKey(Question)
-    order = models.IntegerField()
-    canonical = models.CharField(max_length=50)
-    texts = models.ManyToManyField(Option_Text)
-
-    def __unicode__(self):
-        return self.canonical
-
-
-class Answer(models.Model):
-    visit = models.ForeignKey(Visit)
-    question = models.ForeignKey(Question)
-    text_area = models.TextField()
-    text_field = models.CharField(max_length=3)
-    selected = models.ForeignKey(Option)
-
-    def __unicode__(self):
-        return unicode(self.id)
+        model = Visit
+        exclude = ('ip_address', 'country', 'city', )

@@ -1,39 +1,25 @@
 from json import loads
 import urllib
 
+
 #from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
-from main.models import Visit, Question, Question_Text, Option, Option_Text
-
-
-class DispQuestion:
-    def __init__(self, idq, text, q_type, options):
-        self.id = idq
-        self.text = text
-        self.type = q_type
-        self.options = options
-
-
-class DispOption:
-    def __init__(self, ido, text):
-        self.id = ido
-        self.text = text
+from main.models import Visit, VisitForm
 
 
 def index(request):
-    locale = "es_ES"
-    questions = Question.objects.all().order_by('order')
-    display_qs = []
-    for q in questions:
-        question_text = q.question_text_set.get(locale=locale).content
-        options = []
-        if q.q_type == 'M':
-            for o in q.option_set.all().order_by('order'):
-                options.append(DispOption(o.id, o.texts.get(locale=locale).content))
-                display_qs.append(DispQuestion(q.id, question_text, q.q_type, options))
-    return render_to_response('poll.html', {"questions": display_qs, "locale": locale}, context_instance=RequestContext(request))
+    if request.method == 'POST':  # If the form has been submitted...
+        form = VisitForm(request.POST)  # A form bound to the POST data
+        if form.is_valid():  # All validation rules pass
+            # Process the data in form.cleaned_data
+            # ...
+            return HttpResponseRedirect('/thanks/')  # Redirect after POST
+    else:
+        form = VisitForm()  # An unbound form
+    return render_to_response('poll.html', {'form': form, }, context_instance=RequestContext(request))
 
 
 def process(request):
