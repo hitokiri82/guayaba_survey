@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Consulta</title>
+
+
+  {% load staticfiles %}
+
+  <link rel="stylesheet" href="{% static "css/style.css" %}" type="text/css">
+  <style type="text/css">
+
+
+  </style>
+</head>
+<body>
+  <div class="box" style="float:left; margin:0px 50px">
+    <img src="{% static "images/letters.png" %}" alt="Psidium Project" width="500" style="margin:0 auto;"/>
+    <label>
+        <span>
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent elementum leo id libero pellentesque suscipit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec et accumsan justo. Ut sed diam a odio placerat posuere eget id eros. Sed vestibulum porta tellus, sit amet congue nisl lobortis vitae. Aliquam erat volutpat. Vestibulum sem orci, euismod nec dignissim vitae, varius at risus. Integer vel purus nisi. Nullam viverra sapien neque. Suspendisse commodo diam dui, vitae venenatis neque. Sed viverra, metus nec pulvinar placerat, sem tortor porta dolor, laoreet euismod libero felis quis enim. In dictum fringilla justo, ut tempor lectus bibendum ut. Donec dignissim, leo vel cursus dapibus, quam erat interdum metus, non facilisis ante neque ac tortor. Sed vehicula cursus arcu, in luctus risus dignissim id. Donec tortor turpis, tristique vel adipiscing non, accumsan id odio.</p>
+
+            <p>
+            Donec scelerisque gravida ultrices. Nulla facilisi. Donec fringilla massa non quam vestibulum bibendum. Nam auctor, nunc non aliquam tempor, neque erat gravida sem, in dignissim nulla nibh ac eros. In quis enim non ante accumsan dictum. Nam quis lacus tortor. Nunc ac lacus gravida felis lobortis ultricies vel ac mauris. Fusce semper rutrum nulla id hendrerit. Vivamus vitae nunc urna, nec pharetra erat. In hac habitasse platea dictumst. In eget euismod nisi. Sed tincidunt, enim sit amet vestibulum auctor, sem velit bibendum nisi, id tempor nibh nibh eu odio. Sed lacinia, augue non tristique volutpat, purus metus aliquam lacus, varius iaculis nibh lorem ac nunc. Nulla vel neque odio. Curabitur sodales augue eget augue ullamcorper nec consequat nisi ullamcorper.</p>
+
+            <p>
+            Etiam volutpat ornare libero eget commodo. Sed augue justo, tincidunt sed gravida ac, sollicitudin in nisi. Nulla sed tristique nulla. Etiam vitae sapien tellus. Quisque at mi sit amet risus rutrum mollis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean quis lorem turpis. Ut dolor nunc, vestibulum vitae auctor sit amet, faucibus et dui. Cras enim augue, ornare lobortis viverra a, dapibus eu quam. Donec ac leo vel purus malesuada faucibus et eu lacus. Quisque lorem metus, ullamcorper eget malesuada id, tempor sollicitudin enim.
+            </p>
+        </span>
+    <br>
+    </label>
+  </div>
+
+  <div class="box" style="float:left; margin:0px 25px">
+    <form action="/process/" method="post">
+    {% csrf_token %}
+  	<h1>Preguntas:</h1>
+  	<label>
+		<span># de abogados que trabajan en su oficina</span>
+		<input class="input_text" name="num_lawyers" id="num_lawyers" type="text">
+    <br>
+	</label>
+	<label>
+		<span>&iquest;Cual considera que es el aspecto de su trabajo que mas se podria mejorar?</span>
+		<textarea class="message" name="answer1" id="answer1"></textarea>
+	</label>
+	<label> <span>&iquest;Cual considera que es el aspecto de su trabajo que mas convendria automatizar?</span>
+		<textarea class="message" name="answer2" id="answer2"></textarea>
+	</label>
+    <label>
+        <span>e-mail</span>
+        <input class="input_text" name="email" id="email" type="text"><br>
+        <input class="button" value="Enviar" type="submit">
+    </label>
+    </form>
+   </div>
+
+
+</body></html>

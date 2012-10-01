@@ -4,6 +4,58 @@
 		"selected_items":
 		[
 			[
+				"co",
+				"content"
+			],
+			[
+				"optio",
+				"options_texts"
+			],
+			[
+				"q",
+				"q_type"
+			],
+			[
+				"ques",
+				"question_text"
+			],
+			[
+				"que",
+				"question_text"
+			],
+			[
+				"Que",
+				"Question_Text"
+			],
+			[
+				"Ques",
+				"Question_Text"
+			],
+			[
+				"f",
+				"ForeignKey  (class)"
+			],
+			[
+				"M",
+				"ManyToManyField  (class)"
+			],
+			[
+				"m",
+				"max_length"
+			],
+			[
+				"CH",
+				"CharField"
+			],
+			[
+				"Ch",
+				"CharField"
+			],
+			[
+				"Qu",
+				"QuestionAdmin"
+			],
+			[
 				"text",
 				"Text"
 			],
@@ -44,26 +96,34 @@
 	"buffers":
 	[
 		{
+			"file": "main/views.py",
+			"settings":
+			{
+				"buffer_size": 1657,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/new_poll.html",
+			"settings":
+			{
+				"buffer_size": 6614,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/poll.html",
+			"settings":
+			{
+				"buffer_size": 745,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "main/models.py",
 			"settings":
 			{
-				"buffer_size": 1247,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/pakiko/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
-			"settings":
-			{
-				"buffer_size": 13148,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/pakiko/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
-			"settings":
-			{
-				"buffer_size": 1490,
+				"buffer_size": 1814,
 				"line_ending": "Unix"
 			}
 		}
@@ -71,9 +131,33 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 348.0,
 		"selected_items":
 		[
+			[
+				"pac",
+				"Package Control: Disable Package"
+			],
+			[
+				"paca",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Package Control: Disable Package"
+			],
+			[
+				"Snippet	",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"SublimeCodeIntel: Reset"
+			],
 			[
 				"tag",
 				"Tag: Lint Selection or Document"
@@ -87,10 +171,6 @@
 				"SublimeLinter: Show Error List"
 			],
 			[
-				"pac",
-				"Package Control: Install Package"
-			],
-			[
 				"PAc",
 				"Package Control: Install Package"
 			],
@@ -99,11 +179,11 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 592.0
+		"width": 602.0
 	},
 	"console":
 	{
-		"height": 0.0
+		"height": 139.0
 	},
 	"distraction_free":
 	{
@@ -116,13 +196,35 @@
 	},
 	"file_history":
 	[
+		"/home/pakiko/.config/sublime-text-2/Packages/Djaneiro/html/autoescape.sublime-snippet",
+		"/home/pakiko/.config/sublime-text-2/Packages/Djaneiro/Settings/Python (Django).sublime-settings",
+		"/home/pakiko/.config/sublime-text-2/Packages/User/HTML (Django).sublime-settings",
+		"/home/pakiko/.config/sublime-text-2/Packages/Djaneiro/Settings/HTML (Django).sublime-settings",
+		"/home/pakiko/django/guayaba_survey/templates/poll.html",
+		"/home/pakiko/django/guayaba_survey/static html/poll.html",
+		"/home/pakiko/.ipython/virtualenv.py",
+		"/home/pakiko/.ipython/ipy_user_conf.py",
+		"/home/pakiko/django/guayaba_survey/main/models.py",
+		"/home/pakiko/django/guayaba_survey/main/views.py",
 		"/home/pakiko/django/guayaba_survey/.codeintel/config",
+		"/home/pakiko/.config/sublime-text-2/Packages/SublimeCodeIntel/Default (Linux).sublime-mousemap",
+		"/home/pakiko/.config/sublime-text-2/Packages/User/Default (Linux).sublime-keymap",
+		"/home/pakiko/.config/sublime-text-2/Packages/SublimeCodeIntel/Default (Linux).sublime-keymap",
+		"/home/pakiko/.config/sublime-text-2/Packages/SublimeCodeIntel/Base File.sublime-settings",
+		"/home/pakiko/django/guayaba_survey/survey.sublime-project",
+		"/home/pakiko/.config/sublime-text-2/Packages/User/Python.sublime-settings",
+		"/home/pakiko/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/pakiko/.config/sublime-text-2/Packages/User/Base File.sublime-settings",
+		"/home/pakiko/.config/sublime-text-2/Packages/User/JSON.sublime-settings",
+		"/home/pakiko/django/guayaba_survey/.gitignore",
+		"/home/pakiko/django/guayaba_survey/static html/result.html",
+		"/home/pakiko/django/guayaba_survey/survey/settings.py",
+		"/home/pakiko/django/guayaba_survey/main/admin.py",
+		"/home/pakiko/django/guayaba_survey/static html/Consulta (copy).html",
+		"/home/pakiko/django/guayaba_survey/templates/Consulta (copy).html",
+		"/home/pakiko/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 		"/home/pakiko/django/guayaba_survey/templates/fully static/poll.html",
 		"/home/pakiko/Desktop/borrar.py",
-		"/home/pakiko/django/guayaba_survey/templates/poll.html",
-		"/home/pakiko/django/guayaba_survey/survey/settings.py",
-		"/home/pakiko/django/guayaba_survey/main/models.py",
-		"/home/pakiko/django/guayaba_survey/main/admin.py",
 		"/home/pakiko/django/guayaba_survey/survey/admin.py",
 		"/home/pakiko/django/guayaba_survey/templates/fully static/two_columns_form_reference.html",
 		"/home/pakiko/django/guayaba_survey/templates/fully static/css/bootstrap/css/bootstrap.css",
@@ -131,14 +233,9 @@
 		"/home/pakiko/django/guayaba_survey/templates/old_poll.html",
 		"/home/pakiko/django/guayaba_survey/main/static/css/style.css",
 		"/home/pakiko/django/guayaba_survey/manage.py",
-		"/home/pakiko/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
-		"/home/pakiko/.config/sublime-text-2/Packages/User/Python.sublime-settings",
-		"/home/pakiko/django/guayaba_survey/.gitignore",
 		"/home/pakiko/django/guayaba_survey/survey/urls.py",
 		"/home/pakiko/django/guayaba_survey/templates/style.css",
 		"/home/pakiko/django/guayaba_survey/Procfile",
-		"/home/pakiko/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
-		"/home/pakiko/django/guayaba_survey/templates/Consulta (copy).html",
 		"/home/pakiko/django/guayaba_survey/requirements.txt",
 		"/home/pakiko/django/guayaba_survey/.git/config",
 		"/home/pakiko/django/guayaba_survey/venv/bin/activate",
@@ -146,7 +243,6 @@
 		"/etc/postgresql/9.1/main/pg_hba.conf",
 		"/etc/postgresql/9.1/main/postgresql.conf",
 		"/home/pakiko/django/survey/main/views.py",
-		"/home/pakiko/django/guayaba_survey/main/views.py",
 		"/home/pakiko/django/survey/main/models.py",
 		"/home/pakiko/django/survey/templates/result.html",
 		"/home/pakiko/django/survey/main/admin.py",
@@ -174,6 +270,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".\n",
 			"row-fluid",
 			"postgres",
 			"wrap"
@@ -194,23 +291,23 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "main/models.py",
+					"file": "main/views.py",
 					"settings":
 					{
-						"buffer_size": 1247,
+						"buffer_size": 1657,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1247,
-								1247
+								1001,
+								1001
 							]
 						],
 						"settings":
@@ -312,18 +409,18 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/home/pakiko/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+					"file": "templates/new_poll.html",
 					"settings":
 					{
-						"buffer_size": 13148,
+						"buffer_size": 6614,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12464,
-								12464
+								2475,
+								2475
 							]
 						],
 						"settings":
@@ -375,6 +472,7 @@
 							"gjslint_options":
 							[
 							],
+							"is_xml": false,
 							"javascript_linter": "jshint",
 							"jshint_options":
 							{
@@ -415,28 +513,28 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 4954.0,
+						"translation.y": 833.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "/home/pakiko/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+					"file": "templates/poll.html",
 					"settings":
 					{
-						"buffer_size": 1490,
+						"buffer_size": 745,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								884,
-								884
+								266,
+								266
 							]
 						],
 						"settings":
@@ -488,6 +586,7 @@
 							"gjslint_options":
 							[
 							],
+							"is_xml": false,
 							"javascript_linter": "jshint",
 							"jshint_options":
 							{
@@ -528,7 +627,7 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -539,8 +638,122 @@
 			]
 		},
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 3,
+					"file": "main/models.py",
+					"settings":
+					{
+						"buffer_size": 1814,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								291,
+								291
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"regexdash": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": "save-only",
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 255.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -572,7 +785,7 @@
 		"cols":
 		[
 			0.0,
-			0.648965517241,
+			0.606505780784,
 			1.0
 		],
 		"rows":
