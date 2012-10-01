@@ -2,21 +2,31 @@ from main.models import *
 from django.contrib import admin
 
 
-class TextAdmin(admin.ModelAdmin):
+class OTextAdmin(admin.ModelAdmin):
     list_display = ('id', 'locale', 'content')
     list_filter = ['locale']
 
 
-class OptionInline(admin.StackedInline):
+class QTextAdmin(admin.ModelAdmin):
+    list_display = ('id', 'question', 'locale', 'content')
+    list_filter = ['locale']
+
+
+class OptionInline(admin.TabularInline):
     model = Option
-    extra = 3
+    extra = 0
+
+
+class QTextInline(admin.TabularInline):
+    model = Question_Text
+    extra = 0
 
 
 class QuestionAdmin(admin.ModelAdmin):
-    inlines = [OptionInline]
+    inlines = [QTextInline, OptionInline]
 
 admin.site.register(Visit)
-admin.site.register(Text, TextAdmin)
+admin.site.register(Question_Text, QTextAdmin)
+admin.site.register(Option_Text, OTextAdmin)
 admin.site.register(Question, QuestionAdmin)
 admin.site.register(Answer)
-admin.site.register(Option)
