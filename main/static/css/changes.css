@@ -1,0 +1,7 @@
+body {color: #E0E0E0; margin: 70px;}
+legend {color: #E0E0E0;}
+label {color: #E0E0E0;}
+.navbar-inner { min-height: 50px;}
+p.spaced {
+    line-height: 23px
+}

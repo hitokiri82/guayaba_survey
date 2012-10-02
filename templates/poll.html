@@ -5,14 +5,9 @@
 <title>Poll</title>
 {% load staticfiles %}
 <link rel="stylesheet" href={% static "css/bootstrap/css/bootstrap.css" %} type="text/css">
+<link rel="stylesheet" href={% static "css/changes.css" %} type="text/css">
   <style type="text/css">
-    body {color: #E0E0E0; margin: 70px;}
-    legend {color: #E0E0E0;}
-    label {color: #E0E0E0;}
-    .navbar-inner { min-height: 50px;}
-    p.spaced {
-    line-height: 23px
-    }
+
   </style>
 </head>
 <body>
@@ -61,7 +56,8 @@
                     </div>
                 </div>
             {% endfor %}
-{#           {% for q in questions %}
+            {% comment %}
+            {% for q in questions %}
               {% ifequal q.type 'M' %}
                   <div class="control-group">
                     <label class="control-label" for="select01"> {{ q.text }} </label>
@@ -95,7 +91,8 @@
           </div>
 
               {% endifequal %}
-          {% endfor %} #}
+          {% endfor %}
+          {% endcomment %}
 
 
 

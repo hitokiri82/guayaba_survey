@@ -33,15 +33,15 @@ TIME_KEEPER = (
 )
 
 QUESTIONS_TEXTS = {
-    "Q01": "Cuáles cree usted que son las horas más productivas de su jornada laboral?",
-    "Q02": "Por qué?",
-    "Q03": "Qué tiempo aproximado dedica diariamente a organizar documentos, expedientes y su agenda?",
-    "Q04": "Quien gestiona su agenda?",
-    "Q05": "Utiliza o ha utilizado alguna herramienta informática que le ayude a gestionar su tiempo?",
-    "Q06": "Qué aspecto de su trabajo considera que puede mejorar?",
-    "Q07": "De qué forma suele facturar su trabajo?",
-    "Q08": "Tiene usted control efectivo del tiempo/dinero que invierte en cada cliente?",
-    "Q09": "Cuántos abogados trabajan en su despacho?",
+    "Q01": "¿Cuáles cree usted que son las horas más productivas de su jornada laboral?",
+    "Q02": "¿Por qué?",
+    "Q03": "¿Qué tiempo aproximado dedica diariamente a organizar documentos, expedientes y su agenda?",
+    "Q04": "¿Quien gestiona su agenda?",
+    "Q05": "¿Utiliza o ha utilizado alguna herramienta informática que le ayude a gestionar su tiempo?",
+    "Q06": "¿Qué aspecto de su trabajo considera que puede mejorar?",
+    "Q07": "¿De qué forma suele facturar su trabajo?",
+    "Q08": "¿Tiene usted control efectivo del tiempo/dinero que invierte en cada cliente?",
+    "Q09": "¿Cuántos abogados trabajan en su despacho?",
 }
 
 
