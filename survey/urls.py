@@ -10,7 +10,8 @@ urlpatterns = patterns('',
     # url(r'^survey/', include('survey.foo.urls')),
     #url(r'^survey/$', 'main.views.index'),
     url(r'^$', 'main.views.index'),
-    url(r'^process/', 'main.views.process'),
+    url(r'^thanks/', 'main.views.thanks'),
+    url(r'^registered/', 'main.views.registered'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Thanks!</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href={% static "css/bootstrap/css/bootstrap.css" %} type="text/css">
+    <style type="text/css">
+    body {color: #E0E0E0; margin: 70px;}
+    legend {color: #E0E0E0;}
+    label {color: #E0E0E0;}
+    .navbar-inner { min-height: 50px;}
+    p.spaced {
+        line-height: 23px
+    }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="../">Psidium Project</a>
+                <div class="nav-collapse" id="main-menu"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="span7 well">
+                <h2>Hemos registrado tu direccion de correo</h2>
+                No te vamos a enviar Spam, lo juramos.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

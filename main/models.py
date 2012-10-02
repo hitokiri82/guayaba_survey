@@ -1,7 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from django.db import models
-from django.forms import ModelForm
+from django.forms import ModelForm, TextInput
+
 
 TIMES_OF_DAY = (
     (u'01', u'Mañana'),
@@ -45,19 +46,23 @@ QUESTIONS_TEXTS = {
 
 
 class Visit(models.Model):
+    class Meta:
+        verbose_name = 'Visita'
+        verbose_name_plural = 'Visitas'
+
     ip_address = models.IPAddressField(max_length=15)
     created_date = models.DateTimeField(auto_now_add=True)
     country = models.TextField()
     city = models.TextField()
-    q01 = models.CharField(QUESTIONS_TEXTS['Q01'], max_length=2, choices=TIMES_OF_DAY)
-    q02 = models.TextField(QUESTIONS_TEXTS['Q02'])
-    q03 = models.CharField(QUESTIONS_TEXTS['Q03'], max_length=2, choices=TIME_MANAGING)
-    q04 = models.CharField(QUESTIONS_TEXTS['Q04'], max_length=1, choices=TIME_KEEPER)
-    q05 = models.CharField(QUESTIONS_TEXTS['Q05'], max_length=1, choices=BOOLEAN_OP)
-    q06 = models.TextField(QUESTIONS_TEXTS['Q06'])
-    q07 = models.CharField(QUESTIONS_TEXTS['Q07'], max_length=2, choices=CHARGE_MODES)
-    q08 = models.CharField(QUESTIONS_TEXTS['Q08'], max_length=1, choices=BOOLEAN_OP)
-    q09 = models.IntegerField(QUESTIONS_TEXTS['Q09'])
+    q01 = models.CharField(QUESTIONS_TEXTS['Q01'], max_length=2, choices=TIMES_OF_DAY, blank=True, null=True)
+    q02 = models.TextField(QUESTIONS_TEXTS['Q02'], blank=True, null=True)
+    q03 = models.CharField(QUESTIONS_TEXTS['Q03'], max_length=2, choices=TIME_MANAGING, blank=True, null=True)
+    q04 = models.CharField(QUESTIONS_TEXTS['Q04'], max_length=1, choices=TIME_KEEPER, blank=True, null=True)
+    q05 = models.CharField(QUESTIONS_TEXTS['Q05'], max_length=1, choices=BOOLEAN_OP, blank=True, null=True)
+    q06 = models.TextField(QUESTIONS_TEXTS['Q06'], blank=True, null=True)
+    q07 = models.CharField(QUESTIONS_TEXTS['Q07'], max_length=2, choices=CHARGE_MODES, blank=True, null=True)
+    q08 = models.CharField(QUESTIONS_TEXTS['Q08'], max_length=1, choices=BOOLEAN_OP, blank=True, null=True)
+    q09 = models.IntegerField(QUESTIONS_TEXTS['Q09'], blank=True, null=True)
 
     def __unicode__(self):
         return unicode(self.id) + " " + self.ip_address
@@ -67,3 +72,20 @@ class VisitForm(ModelForm):
     class Meta:
         model = Visit
         exclude = ('ip_address', 'country', 'city', )
+
+
+class Contact(models.Model):
+    class Meta:
+        verbose_name = 'Contacto'
+    email = models.EmailField('e-mail')
+
+    def __unicode__(self):
+        pass
+
+
+class ContactForm(ModelForm):
+    class Meta:
+        model = Contact
+        widgets = {
+            'email': TextInput(attrs={'placeholder': 'E-mail'}),
+        }
