@@ -5,10 +5,9 @@
     <title>Poll</title>
     {% load staticfiles %}
     <link rel="stylesheet" href={% static "css/bootstrap/css/bootstrap.css" %} type="text/css">
-    {#
     <link rel="stylesheet" href={% static "css/changes.css" %} type="text/css">
-    #}
-    <style type="text/css">body { margin: 70px;}</style>
+    <style type="text/css">
+    </style>
 </head>
 <body>
     <div class="navbar navbar-fixed-top">
@@ -40,28 +39,78 @@
             </p>
 
         </div>
-        <div class="row-fluid">
-            <div class="span8 offset2 well">
-                <form class="form-horizontal" method="post">
+        <legend>Preguntas</legend>
+        <div class="row-fluid well">
+            <form class="form-horizontal" method="post">
+            {{ form.non_field_errors }}
+            <div class="span6">
+
                     <fieldset>
-                        <legend>Preguntas</legend>
+
                         {% csrf_token %}
-                        {% for field in form %}
+
                         <div class="control-group">
-                            {{ field.errors }}
-                            <div class="control-label">{{ field.label_tag }}</div>
-                            <div class="controls">{{ field }}</div>
+                            <div class="warning">{{ form.q01.errors }}</div>
+                            <div class="control-label">{{ form.q01.label_tag }}</div>
+                            <div class="controls">{{ form.q01 }}</div>
                         </div>
-                        {% endfor %}
+                        <div class="control-group">
+                            {{ form.q02.errors }}
+                            <div class="control-label">{{ form.q02.label_tag }}</div>
+                            <div class="controls">{{ form.q02 }}</div>
+                        </div>
+                        <div class="control-group">
+                            {{ form.q03.errors }}
+                            <div class="control-label">{{ form.q03.label_tag }}</div>
+                            <div class="controls">{{ form.q03 }}</div>
+                        </div>
+                        <div class="control-group">
+                            {{ form.q04.errors }}
+                            <div class="control-label">{{ form.q04.label_tag }}</div>
+                            <div class="controls">{{ form.q04 }}</div>
+                        </div>
+
+                    </fieldset>
+
+            </div>
+            <div class="span6 ">
+                    <fieldset>
+                        <div class="control-group">
+                            {{ form.q05.errors }}
+                            <div class="control-label">{{ form.q05.label_tag }}</div>
+                            <div class="controls">{{ form.q05 }}</div>
+                        </div>
+                        <div class="control-group">
+                            {{ form.q06.errors }}
+                            <div class="control-label">{{ form.q06.label_tag }}</div>
+                            <div class="controls">{{ form.q06 }}</div>
+                        </div>
+                        <div class="control-group">
+                            {{ form.q07.errors }}
+                            <div class="control-label">{{ form.q07.label_tag }}</div>
+                            <div class="controls">{{ form.q07 }}</div>
+                        </div>
+                        <div class="control-group">
+                            {{ form.q08.errors }}
+                            <div class="control-label">{{ form.q08.label_tag }}</div>
+                            <div class="controls">{{ form.q08 }}</div>
+                        </div>
+                        <div class="control-group">
+                            <div class="text-warning">{{ form.q09.errors }}</div>
+                            <p class="text-error">Warning</p>
+                            <div class="control-label">{{ form.q09.label_tag }}</div>
+                            <div class="controls">{{ form.q09 }}</div>
+                        </div>
                         <div class="form-actions">
-                            <button type="submit" class="btn btn-success btn-large">Enviar</button>
+                            <button type="submit" class="btn btn-large btn-block btn-info">Enviar</button>
                         </div>
                     </fieldset>
-                </form>
+
             </div>
+            </form>
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src={% static "css/bootstrap/js/bootstrap.min.js" %}></script>
 </body>
 </html>

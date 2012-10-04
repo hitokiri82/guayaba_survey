@@ -80,7 +80,7 @@ class Contact(models.Model):
     email = models.EmailField('e-mail')
 
     def __unicode__(self):
-        pass
+        return unicode(self.email)
 
 
 class ContactForm(ModelForm):
