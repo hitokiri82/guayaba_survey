@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Poll</title>
     {% load staticfiles %}
-    <link rel="stylesheet" href={% static "css/bootstrap/css/bootstrap.css" %} type="text/css">
+    <link rel="stylesheet" href={% static "css/bootstrap.css" %} type="text/css">
     <link rel="stylesheet" href={% static "css/changes.css" %} type="text/css">
     <style type="text/css">
     </style>
@@ -39,9 +39,16 @@
             </p>
 
         </div>
+        <a name="form"></a>
         <legend>Preguntas</legend>
+        {% if form.errors %}
+        <div class="alert alert-block alert-error">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          <strong>Debes corregir uno de los campos de la encuesta</strong>
+        </div>
+        {% endif %}
         <div class="row-fluid well">
-            <form class="form-horizontal" method="post">
+            <form class="form-horizontal" method="post" action="#form">
             {{ form.non_field_errors }}
             <div class="span6">
 
@@ -95,10 +102,14 @@
                             <div class="control-label">{{ form.q08.label_tag }}</div>
                             <div class="controls">{{ form.q08 }}</div>
                         </div>
+                        {% if form.q09.errors %}
+                        <div class="control-group error">
+                        {% else %}
                         <div class="control-group">
-                            <div class="text-warning">{{ form.q09.errors }}</div>
-                            <p class="text-error">Warning</p>
-                            <div class="control-label">{{ form.q09.label_tag }}</div>
+                        {% endif %}
+                            <div class="text-error">{{ form.q09.errors }}</div>
+                            <label class="control-label" for="id_q09">{{form.q09.label}}</label>
+
                             <div class="controls">{{ form.q09 }}</div>
                         </div>
                         <div class="form-actions">
@@ -111,6 +122,6 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src={% static "css/bootstrap/js/bootstrap.min.js" %}></script>
+    <script src={% static "js/bootstrap.min.js" %}></script>
 </body>
 </html>
