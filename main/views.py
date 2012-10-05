@@ -24,6 +24,8 @@ def index(request):
             visit.city = city
             visit.save()
             return HttpResponseRedirect('/thanks/')  # Redirect after POST
+        else:
+            print form.errors
     else:
         form = VisitForm()  # An unbound form
     return render_to_response('poll.html', {'form': form, }, context_instance=RequestContext(request))

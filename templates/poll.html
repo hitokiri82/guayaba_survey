@@ -25,22 +25,24 @@
     </div>
     <div class="container">
         <div class="hero-unit">
-            <h1>Gracias por estar aqui!</h1>
-            <h2>Necesitamos solo un minuto de tu tiempo</h2>
+            <h1>¡Gracias por estar aquí!</h1>
+            <h2 style="color: #DC9B31;">Necesitamos sólo un minuto de tu tiempo</h2>
 
-            <p class="lead">
-                El objetivo de esta encuesta es conocer cuales son los principales problemas
-        que afectan el desempeño de los profesionales del derecho
+            <p >
+                <strong>Queremos</strong> conocer cuales son los principales problemas
+        que afectan el desempeño de los profesionales del derecho.
             </p>
-            <p class="lead">
-                Creemos que este colectivo no ha sido atendido bien por el mundo tecnologico
-            y quisieramos con esta informacion dar los primeros pasos hacia el desarrollo
-            de una herramienta moderna que facilite el trabajo diario en los despachos
+            <p >
+                <strong>Creemos</strong> que haciendo uso de la tecnología podemos
+                proporcionar herramentas innovadoras que te ayuden a resolverlos.
             </p>
-
+            <p >
+                Te aseguramos que esta encuesta es <strong>completamente anónima</strong>.
+            </p>
+            <p >
+                No es necesario que contestes todas las preguntas. Tu aporte es muy <strong>valioso</strong> para nosotros por pequeño que sea.
+            </p>
         </div>
-        <a name="form"></a>
-        <legend>Preguntas</legend>
         {% if form.errors %}
         <div class="alert alert-block alert-error">
           <button type="button" class="close" data-dismiss="alert">×</button>
@@ -48,7 +50,7 @@
         </div>
         {% endif %}
         <div class="row-fluid well">
-            <form class="form-horizontal" method="post" action="#form">
+            <form class="form-horizontal" method="post" action="">
             {{ form.non_field_errors }}
             <div class="span6">
 
@@ -76,17 +78,17 @@
                             <div class="control-label">{{ form.q04.label_tag }}</div>
                             <div class="controls">{{ form.q04 }}</div>
                         </div>
-
-                    </fieldset>
-
-            </div>
-            <div class="span6 ">
-                    <fieldset>
                         <div class="control-group">
                             {{ form.q05.errors }}
                             <div class="control-label">{{ form.q05.label_tag }}</div>
                             <div class="controls">{{ form.q05 }}</div>
                         </div>
+                    </fieldset>
+
+            </div>
+            <div class="span6 ">
+                    <fieldset>
+
                         <div class="control-group">
                             {{ form.q06.errors }}
                             <div class="control-label">{{ form.q06.label_tag }}</div>
@@ -112,8 +114,13 @@
 
                             <div class="controls">{{ form.q09 }}</div>
                         </div>
+                        <div class="control-group">
+                            {{ form.q10.errors }}
+                            <div class="control-label">{{ form.q10.label_tag }}</div>
+                            <div class="controls">{{ form.q10 }}</div>
+                        </div>
                         <div class="form-actions">
-                            <button type="submit" class="btn btn-large btn-block btn-info">Enviar</button>
+                            <button type="submit" class="btn btn-large btn-block btn-primary">Enviar »</button>
                         </div>
                     </fieldset>
 

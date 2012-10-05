@@ -1,10 +1,17 @@
   /*body { margin: 70px;}*/
-  textarea { height: 100px;}
-  .hero-unit { padding: 60px;}
+textarea { height: 100px;}
+.hero-unit { padding: 40px 60px;}
 body {
   padding-top: 60px;
   padding-bottom: 40px;
 }
 .brand {
     color: #ECAA3E !important;
+}
+.dt-logo-small {
+display: inline-block;
+width: 13px;
+height: 20px;
+background: url('/assets/img/dt-logo-small.png');
+margin-right: 5px;
 }

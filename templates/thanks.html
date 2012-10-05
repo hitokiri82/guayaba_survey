@@ -30,12 +30,12 @@
                 <h3>Tu aporte es increiblemente valioso para nuestro proyecto</h3>
                 <br>
                 Si te interesa, y en caso de que nuestra iniciativa resulte en un proyecto que
-                resuelva algunas de las inquitudes que nos planteaste nos gustaria tener alguna
+                resuelva algunas de las inquitudes que nos planteaste nos gustaría tener alguna
                 manera de contactarte.
                 Para eso tenemos tres opciones:
                 <ol>
                     <li>
-                        Nos puedes facilitar tu correo electronico, te prometemos que solo te escribiremos una vez en caso de que el proyecto despegue
+                        Nos puedes facilitar tu correo electrónico (te prometemos que solo te escribiremos una vez en caso de que el proyecto despegue y que nunca lo facilitaremos a ningún tercero)
                         <br>
                         <br>
 
@@ -43,13 +43,12 @@
                             {% csrf_token %}
                             {{ form.email.errors }}
                             {{ form.email }}
-                            {# <input type="text" class="input" placeholder="Email">#}
-                            <button type="submit" class="btn">Enviar</button>
+                            <button type="submit" class="btn btn-primary">Enviar »</button>
                         </form>
                     </li>
                     <li>
                         Te puedes subscribir a la cuenta de twitter @proyecto_psidium y asi mantendras el control de
-                        tu comunicaicon con nosotros, de nuevo, solo utilizaremos esta cuenta para anunciar el lanzamiento de nuestro proyecto. 0% Spam.
+                        tu comunicación con nosotros, de nuevo, solo utilizaremos esta cuenta para anunciar el lanzamiento de nuestro proyecto. 0% Spam.
                     </li>
                     <li>
                         Puedes añadir la pagina
