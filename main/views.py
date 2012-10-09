@@ -14,15 +14,15 @@ def index(request):
     if request.method == 'POST':  # If the form has been submitted...
         form = VisitForm(request.POST)  # A form bound to the POST data
         if form.is_valid():  # All validation rules pass
-            visit = form.save(commit=False)
-            ip_address = request.META['REMOTE_ADDR']
-            response = loads(urlopen('http://api.hostip.info/get_json.php?ip=' + ip_address).read())
-            country = response['country_name']
-            city = response['city']
-            visit.ip_address = ip_address
-            visit.country = country
-            visit.city = city
-            visit.save()
+            if form.has_changed():
+                visit = form.save(commit=False)
+                ip_address = request.META['REMOTE_ADDR']
+                response = loads(urlopen('http://api.hostip.info/get_json.php?ip=' + ip_address).read())
+                country = response['country_name']
+                city = response['city']
+                visit.country = country
+                visit.city = city
+                visit.save()
             return HttpResponseRedirect('/thanks/')  # Redirect after POST
         else:
             print form.errors
