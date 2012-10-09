@@ -1,5 +1,5 @@
 from json import loads
-import urllib
+from urllib import urlopen
 
 
 #from django.http import HttpResponse
@@ -16,7 +16,7 @@ def index(request):
         if form.is_valid():  # All validation rules pass
             visit = form.save(commit=False)
             ip_address = request.META['REMOTE_ADDR']
-            response = loads(urllib.urlopen('http://api.hostip.info/get_json.php?ip=' + ip_address).read())
+            response = loads(urlopen('http://api.hostip.info/get_json.php?ip=' + ip_address).read())
             country = response['country_name']
             city = response['city']
             visit.ip_address = ip_address
@@ -44,3 +44,7 @@ def thanks(request):
 
 def registered(request):
     return render_to_response('registered.html', {})
+
+
+def status(request):
+    return render_to_response('status.html', {})

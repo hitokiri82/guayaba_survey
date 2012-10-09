@@ -39,7 +39,7 @@
                         <br>
                         <br>
 
-                        <form class="form-search" method="post">
+                        <form class="form-search" method="post" action"">
                             {% csrf_token %}
                             {{ form.email.errors }}
                             {{ form.email }}
@@ -52,7 +52,7 @@
                     </li>
                     <li>
                         Puedes añadir la pagina
-                        <a>Status</a>
+                        <a href={% url main.views.status %}>Status</a>
                         a tus favoritos y revisarla de vez en cuando para
                         saber el status de nuestra iniciativa
                     </li>
