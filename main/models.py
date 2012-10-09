@@ -68,7 +68,7 @@ class Visit(models.Model):
     q10 = models.CharField(QUESTIONS_TEXTS['Q10'], max_length=1, choices=BOOLEAN_OP2, blank=True, null=True)
 
     def __unicode__(self):
-        return unicode(self.id) + " " + self.ip_address
+        return unicode(self.id)
 
 
 class VisitForm(ModelForm):
