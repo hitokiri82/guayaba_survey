@@ -7,3 +7,4 @@ survey.db
 /venv
 /survey/collected_static.env
 .env
+survey/collected_static/

@@ -15,3 +15,7 @@ height: 20px;
 background: url('/assets/img/dt-logo-small.png');
 margin-right: 5px;
 }
+
+.spaced {
+    line-height:170%;
+}
