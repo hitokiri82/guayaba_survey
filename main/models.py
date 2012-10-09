@@ -37,7 +37,7 @@ TIME_KEEPER = (
 QUESTIONS_TEXTS = {
     "Q01": "Aproximadamente, ¿Cuánto tiempo le dedicas diariamente a organizar tus documentos y tu agenda?",
     "Q02": "¿Quién gestiona principalmente tu agenda?",
-    "Q03": "¿Utilizas o has utilizado alguna herramienta informática que te ayude a gestionar tu practica (tiempos, expedientes, etc.)?",
+    "Q03": "¿Utilizas o has utilizado alguna herramienta informática que te ayude a gestionar tu práctica (tiempos, expedientes, etc.)?",
     "Q04": "En caso afirmativo, ¿Cúal(es)?",
     "Q05": "¿Cuál dirías que es la principal deficiencia de estos sistemas?",
     "Q06": "Si pudieras automatizar cualquier aspecto de tu trabajo, ¿cuál sería?",

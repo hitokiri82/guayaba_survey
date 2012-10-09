@@ -1,1 +1,1 @@
-web: gunicorn survey.wsgi -b 0.0.0.0:$PORT
+web: gunicorn survey.wsgi -b 0.0.0.0:$PORT --workers 9
