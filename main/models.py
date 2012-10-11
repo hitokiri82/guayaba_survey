@@ -2,56 +2,57 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.forms import ModelForm, TextInput
+from django.utils.translation import ugettext as _
 
 
 TIME_MANAGING = (
-    (u'01', u'Menos de 1 Hora'),
-    (u'02', u'Entre 1 y 2 Horas'),
-    (u'03', u'Más de 2 Horas'),
+    (u'01', _(u'Menos de 1 Hora')),
+    (u'02', _(u'Entre 1 y 2 Horas')),
+    (u'03', _(u'Más de 2 Horas')),
 )
 
 BOOLEAN_OP = (
-    (u'Y', u'Si'),
-    (u'N', u'No'),
+    (u'Y', _(u'Si')),
+    (u'N', _(u'No')),
 )
 
 BOOLEAN_OP2 = (
-    (u'Y', u'Si'),
-    (u'N', u'No'),
-    (u'I', u'Indiferente'),
+    (u'Y', _(u'Si')),
+    (u'N', _(u'No')),
+    (u'I', _(u'Indiferente')),
 )
 
 CHARGE_MODES = (
-    (u'01', u'Por horas'),
-    (u'02', u'Por asunto'),
-    (u'03', u'Por trámite'),
-    (u'04', u'Por cuota mensual/retainer'),
+    (u'01', _(u'Por horas')),
+    (u'02', _(u'Por asunto')),
+    (u'03', _(u'Por trámite')),
+    (u'04', _(u'Por cuota mensual/retainer')),
 )
 
 TIME_KEEPER = (
-    (u'01', u'Yo mismo'),
-    (u'02', u'Mi asistente/secretaria'),
-    (u'03', u'Mi jefe/supervisor'),
+    (u'01', _(u'Yo mismo')),
+    (u'02', _(u'Mi asistente/secretaria')),
+    (u'03', _(u'Mi jefe/supervisor')),
 )
 
 QUESTIONS_TEXTS = {
-    "Q01": "Aproximadamente, ¿Cuánto tiempo le dedicas diariamente a organizar tus documentos y tu agenda?",
-    "Q02": "¿Quién gestiona principalmente tu agenda?",
-    "Q03": "¿Utilizas o has utilizado alguna herramienta informática que te ayude a gestionar tu práctica (tiempos, expedientes, etc.)?",
-    "Q04": "En caso afirmativo, ¿Cúal(es)?",
-    "Q05": "¿Cuál dirías que es la principal deficiencia de estos sistemas?",
-    "Q06": "Si pudieras automatizar cualquier aspecto de tu trabajo, ¿cuál sería?",
-    "Q07": "¿De qué forma sueles facturar tu trabajo?",
-    "Q08": "¿Tienes control efectivo del tiempo/dinero que inviertes en cada cliente?",
-    "Q09": "¿Cuántos abogados trabajan en tu despacho?",
-    "Q10": "¿Te parecería valioso poder visualizar gráficamente el estado de tus asuntos?",
+    "Q01": _(u"Aproximadamente, ¿Cuánto tiempo le dedicas diariamente a organizar tus documentos y tu agenda?"),
+    "Q02": _(u"¿Quién gestiona principalmente tu agenda?"),
+    "Q03": _(u"¿Utilizas o has utilizado alguna herramienta informática que te ayude a gestionar tu práctica (tiempos, expedientes, etc.)?"),
+    "Q04": _(u"En caso afirmativo, ¿Cúal(es)?"),
+    "Q05": _(u"¿Cuál dirías que es la principal deficiencia de estos sistemas?"),
+    "Q06": _(u"Si pudieras automatizar cualquier aspecto de tu trabajo, ¿cuál sería?"),
+    "Q07": _(u"¿De qué forma sueles facturar tu trabajo?"),
+    "Q08": _(u"¿Tienes control efectivo del tiempo/dinero que inviertes en cada cliente?"),
+    "Q09": _(u"¿Cuántos abogados trabajan en tu despacho?"),
+    "Q10": _(u"¿Te parecería valioso poder visualizar gráficamente el estado de tus asuntos?"),
 }
 
 
 class Visit(models.Model):
     class Meta:
-        verbose_name = 'Visita'
-        verbose_name_plural = 'Visitas'
+        verbose_name = _('Visita')
+        verbose_name_plural = _('Visitas')
 
     created_date = models.DateTimeField(auto_now_add=True)
     country = models.TextField()
@@ -79,7 +80,8 @@ class VisitForm(ModelForm):
 
 class Contact(models.Model):
     class Meta:
-        verbose_name = 'Contacto'
+        verbose_name = _('Contacto')
+        verbose_name_plural = _('Contactos')
     email = models.EmailField('e-mail')
 
     def __unicode__(self):
