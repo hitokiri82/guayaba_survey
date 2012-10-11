@@ -1,78 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Thanks!</title>
-    {% load staticfiles %}
-    <link rel="stylesheet" href={% static "css/bootstrap.css" %} type="text/css">
-    <link rel="stylesheet" href={% static "css/changes.css" %} type="text/css">
-    <style type="text/css"></style>
-    <script type="text/javascript">
+{% extends "base.html" %}
+{% load i18n %}
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-35438461-1']);
-  _gaq.push(['_trackPageview']);
+{% block title %}
+    {% trans "Gracias" %}
+{% endblock title %}
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+{% block contents %}
+    <div class="row">
+        <div class="span7 well spaced">
+            <h2>¡Gracias por participar!</h2>
+            <br>
+            Si te interesa, y en caso de que nuestra iniciativa resulte en un proyecto que
+            resuelva algunas de las inquitudes que nos planteaste, nos gustaría poder contactarte.
+            <br>
+            Para eso tenemos tres opciones:
+            <ol>
+                <li class="spaced">
+                    Nos puedes facilitar tu correo electrónico (te prometemos que solo te escribiremos una vez en caso de que el proyecto despegue y que nunca lo facilitaremos a ningún tercero).
+                    <br>
+                    <br>
 
-</script>
-</head>
-<body>
-    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <a class="brand" href="../">Psidium Project</a>
-                <div class="nav-collapse" id="main-menu"></div>
-            </div>
+                    <form class="form-search" method="post" action"">
+                        {% csrf_token %}
+                        {{ form.email.errors }}
+                        {{ form.email }}
+                        <button type="submit" class="btn btn-primary">Enviar »</button>
+                    </form>
+                </li>
+                <li class="spaced">
+                    Te puedes subscribir a la cuenta de twitter @psidium_project y asi mantendrás el control de
+                    tu comunicación con nosotros. De nuevo, sólo utilizaremos esta cuenta para anunciar el lanzamiento de nuestro proyecto: 0% Spam.
+                </li>
+                <li class="spaced">
+                    Puedes añadir la página
+                    <a href={% url main.views.status %}>Status</a>
+                    a tus favoritos y revisarla de vez en cuando para
+                    saber el status de nuestra iniciativa.
+                </li>
+            </ol>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="span7 well spaced">
-                <h2>¡Gracias por participar!</h2>
-                <br>
-                Si te interesa, y en caso de que nuestra iniciativa resulte en un proyecto que
-                resuelva algunas de las inquitudes que nos planteaste, nos gustaría poder contactarte.
-                <br>
-                Para eso tenemos tres opciones:
-                <ol>
-                    <li class="spaced">
-                        Nos puedes facilitar tu correo electrónico (te prometemos que solo te escribiremos una vez en caso de que el proyecto despegue y que nunca lo facilitaremos a ningún tercero).
-                        <br>
-                        <br>
 
-                        <form class="form-search" method="post" action"">
-                            {% csrf_token %}
-                            {{ form.email.errors }}
-                            {{ form.email }}
-                            <button type="submit" class="btn btn-primary">Enviar »</button>
-                        </form>
-                    </li>
-                    <li class="spaced">
-                        Te puedes subscribir a la cuenta de twitter @psidium_project y asi mantendrás el control de
-                        tu comunicación con nosotros. De nuevo, sólo utilizaremos esta cuenta para anunciar el lanzamiento de nuestro proyecto: 0% Spam.
-                    </li>
-                    <li class="spaced">
-                        Puedes añadir la página
-                        <a href={% url main.views.status %}>Status</a>
-                        a tus favoritos y revisarla de vez en cuando para
-                        saber el status de nuestra iniciativa.
-                    </li>
-                </ol>
-            </div>
-        </div>
-    </div>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-</body>
-
-</html>
+{% endblock contents %}

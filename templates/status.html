@@ -1,51 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Status</title>
-    {% load staticfiles %}
-    <link rel="stylesheet" href={% static "css/bootstrap.css" %} type="text/css">
-    <link rel="stylesheet" href={% static "css/changes.css" %} type="text/css">
-    <style type="text/css"></style>
-<script type="text/javascript">
+{% extends "base.html" %}
+{% load i18n %}
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-35438461-1']);
-  _gaq.push(['_trackPageview']);
+{% block title %}
+    {% trans "Status" %}
+{% endblock title %}
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-</head>
-<body>
-    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <a class="brand" href="../">Psidium Project</a>
-                <div class="nav-collapse" id="main-menu"></div>
-            </div>
+{% block contents %}
+    <div class="row">
+        <div class="span7 well">
+            <h1>Status: <span style="color: #DC9B31;">En desarrollo</span></h1>
+            Muchas gracias por tu interés.
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="span7 well">
-                <h1>Status: <span style="color: #DC9B31;">En desarrollo</span></h1>
-                Muchas gracias por tu interés.
-
-
-            </div>
-        </div>
-    </div>
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+{% endblock contents %}

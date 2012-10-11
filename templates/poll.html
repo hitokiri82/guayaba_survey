@@ -1,146 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>Encuesta</title>
-    {% load staticfiles %}
-    <link rel="stylesheet" href={% static "css/bootstrap.css" %} type="text/css">
-    <link rel="stylesheet" href={% static "css/changes.css" %} type="text/css">
-    <style type="text/css">
-    </style>
-<script type="text/javascript">
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}
+    {% trans "Encuesta" %}
+{% endblock title %}
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-35438461-1']);
-  _gaq.push(['_trackPageview']);
+{% block contents %}
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+<div class="hero-unit">
+    <h1>¡Gracias por estar aquí!</h1>
+    <h2 style="color: #DC9B31;">Necesitamos sólo un minuto de tu tiempo</h2>
+    <p > <strong>Queremos</strong> conocer cuales son los principales problemas que afectan el desempeño de los profesionales del derecho.
+    </p>
+    <p > <strong>Creemos</strong> que haciendo uso de la tecnología podemos proporcionar herramentas innovadoras que te ayuden a resolverlos.
+    </p>
+    <p >
+        Te aseguramos que esta encuesta es <strong>completamente anónima</strong>.
+    </p>
+    <p>
+        Tu aporte es increíblemente <strong>valioso</strong> para nosotros.
+    </p>
+    <p >
+        <strong>No es necesario que contestes todas las preguntas.</strong>
+    </p>
+</div>
+{% if form.errors %}
+<div class="alert alert-block alert-error">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <strong>Debes corregir uno de los campos de la encuesta</strong>
+</div>
+{% endif %}
+<div class="row-fluid well">
+    <form class="form-horizontal" method="post" action="">
+    {{ form.non_field_errors }}
+    <div class="span6">
 
-</script>
-</head>
-<body>
-    {% load i18n %}
-    <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <a class="brand" href="../">Psidium Project</a>
-                <div class="nav-collapse" id="main-menu"></div>
-            </div>
-        </div>
+            <fieldset>
+
+                {% csrf_token %}
+
+                <div class="control-group">
+                    <div class="warning">{{ form.q01.errors }}</div>
+                    <div class="control-label">{{ form.q01.label_tag }}</div>
+                    <div class="controls">{{ form.q01 }}</div>
+                </div>
+                <div class="control-group">
+                    {{ form.q02.errors }}
+                    <div class="control-label">{{ form.q02.label_tag }}</div>
+                    <div class="controls">{{ form.q02 }}</div>
+                </div>
+                <div class="control-group">
+                    {{ form.q03.errors }}
+                    <div class="control-label">{{ form.q03.label_tag }}</div>
+                    <div class="controls">{{ form.q03 }}</div>
+                </div>
+                <div class="control-group">
+                    {{ form.q04.errors }}
+                    <div class="control-label">{{ form.q04.label_tag }}</div>
+                    <div class="controls">{{ form.q04 }}</div>
+                </div>
+                <div class="control-group">
+                    {{ form.q05.errors }}
+                    <div class="control-label">{{ form.q05.label_tag }}</div>
+                    <div class="controls">{{ form.q05 }}</div>
+                </div>
+            </fieldset>
+
     </div>
-    <div class="container">
-        <div class="hero-unit">
-            <h1>¡Gracias por estar aquí!</h1>
-            <h2 style="color: #DC9B31;">Necesitamos sólo un minuto de tu tiempo</h2>
-            <p > <strong>Queremos</strong> conocer cuales son los principales problemas que afectan el desempeño de los profesionales del derecho.
-            </p>
-            <p > <strong>Creemos</strong> que haciendo uso de la tecnología podemos proporcionar herramentas innovadoras que te ayuden a resolverlos.
-            </p>
-            <p >
-                Te aseguramos que esta encuesta es <strong>completamente anónima</strong>.
-            </p>
-            <p>
-                Tu aporte es increíblemente <strong>valioso</strong> para nosotros.
-            </p>
-            <p >
-                <strong>No es necesario que contestes todas las preguntas.</strong>
-            </p>
-        </div>
-        {% if form.errors %}
-        <div class="alert alert-block alert-error">
-          <button type="button" class="close" data-dismiss="alert">×</button>
-          <strong>Debes corregir uno de los campos de la encuesta</strong>
-        </div>
-        {% endif %}
-        <div class="row-fluid well">
-            <form class="form-horizontal" method="post" action="">
-            {{ form.non_field_errors }}
-            <div class="span6">
+    <div class="span6 ">
+            <fieldset>
 
-                    <fieldset>
+                <div class="control-group">
+                    {{ form.q06.errors }}
+                    <div class="control-label">{{ form.q06.label_tag }}</div>
+                    <div class="controls">{{ form.q06 }}</div>
+                </div>
+                <div class="control-group">
+                    {{ form.q07.errors }}
+                    <div class="control-label">{{ form.q07.label_tag }}</div>
+                    <div class="controls">{{ form.q07 }}</div>
+                </div>
+                <div class="control-group">
+                    {{ form.q08.errors }}
+                    <div class="control-label">{{ form.q08.label_tag }}</div>
+                    <div class="controls">{{ form.q08 }}</div>
+                </div>
+                {% if form.q09.errors %}
+                    <div class="control-group error">
+                {% else %}
+                    <div class="control-group">
+                {% endif %}
+                <div class="text-error">{{ form.q09.errors }}</div>
+                <label class="control-label" for="id_q09">{{form.q09.label}}</label>
 
-                        {% csrf_token %}
+                <div class="controls">{{ form.q09 }}</div>
+                </div>
+                <div class="control-group">
+                    {{ form.q10.errors }}
+                    <div class="control-label">{{ form.q10.label_tag }}</div>
+                    <div class="controls">{{ form.q10 }}</div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-large btn-block btn-primary">Enviar »</button>
+                </div>
+            </fieldset>
 
-                        <div class="control-group">
-                            <div class="warning">{{ form.q01.errors }}</div>
-                            <div class="control-label">{{ form.q01.label_tag }}</div>
-                            <div class="controls">{{ form.q01 }}</div>
-                        </div>
-                        <div class="control-group">
-                            {{ form.q02.errors }}
-                            <div class="control-label">{{ form.q02.label_tag }}</div>
-                            <div class="controls">{{ form.q02 }}</div>
-                        </div>
-                        <div class="control-group">
-                            {{ form.q03.errors }}
-                            <div class="control-label">{{ form.q03.label_tag }}</div>
-                            <div class="controls">{{ form.q03 }}</div>
-                        </div>
-                        <div class="control-group">
-                            {{ form.q04.errors }}
-                            <div class="control-label">{{ form.q04.label_tag }}</div>
-                            <div class="controls">{{ form.q04 }}</div>
-                        </div>
-                        <div class="control-group">
-                            {{ form.q05.errors }}
-                            <div class="control-label">{{ form.q05.label_tag }}</div>
-                            <div class="controls">{{ form.q05 }}</div>
-                        </div>
-                    </fieldset>
-
-            </div>
-            <div class="span6 ">
-                    <fieldset>
-
-                        <div class="control-group">
-                            {{ form.q06.errors }}
-                            <div class="control-label">{{ form.q06.label_tag }}</div>
-                            <div class="controls">{{ form.q06 }}</div>
-                        </div>
-                        <div class="control-group">
-                            {{ form.q07.errors }}
-                            <div class="control-label">{{ form.q07.label_tag }}</div>
-                            <div class="controls">{{ form.q07 }}</div>
-                        </div>
-                        <div class="control-group">
-                            {{ form.q08.errors }}
-                            <div class="control-label">{{ form.q08.label_tag }}</div>
-                            <div class="controls">{{ form.q08 }}</div>
-                        </div>
-                        {% if form.q09.errors %}
-                        <div class="control-group error">
-                        {% else %}
-                        <div class="control-group">
-                        {% endif %}
-                            <div class="text-error">{{ form.q09.errors }}</div>
-                            <label class="control-label" for="id_q09">{{form.q09.label}}</label>
-
-                            <div class="controls">{{ form.q09 }}</div>
-                        </div>
-                        <div class="control-group">
-                            {{ form.q10.errors }}
-                            <div class="control-label">{{ form.q10.label_tag }}</div>
-                            <div class="controls">{{ form.q10 }}</div>
-                        </div>
-                        <div class="form-actions">
-                            <button type="submit" class="btn btn-large btn-block btn-primary">Enviar »</button>
-                        </div>
-                    </fieldset>
-
-            </div>
-            </form>
-        </div>
     </div>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src={% static "js/bootstrap.min.js" %}></script>
-</body>
-</html>
+    </form>
+</div>
+
+{% endblock contents %}
