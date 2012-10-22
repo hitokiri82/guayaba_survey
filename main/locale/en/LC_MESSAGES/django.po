@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-11 19:36+0200\n"
+"POT-Creation-Date: 2012-10-22 19:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,230 +19,250 @@ msgstr ""
 
 #: models.py:9
 msgid "Menos de 1 Hora"
-msgstr ""
+msgstr "Less than an hour"
 
 #: models.py:10
 msgid "Entre 1 y 2 Horas"
-msgstr ""
+msgstr "Between 1 and 2 hours"
 
 #: models.py:11
 msgid "Más de 2 Horas"
-msgstr ""
+msgstr "More than 2 hours"
 
 #: models.py:15 models.py:20
 msgid "Si"
-msgstr ""
+msgstr "Yes"
 
 #: models.py:16 models.py:21
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: models.py:22
 msgid "Indiferente"
-msgstr ""
+msgstr "Irrelevant"
 
 #: models.py:26
 msgid "Por horas"
-msgstr ""
+msgstr "By hours"
 
 #: models.py:27
 msgid "Por asunto"
-msgstr ""
+msgstr "By case"
 
 #: models.py:28
 msgid "Por trámite"
-msgstr ""
+msgstr "By task"
 
 #: models.py:29
 msgid "Por cuota mensual/retainer"
-msgstr ""
+msgstr "Monthly retainer"
 
 #: models.py:33
 msgid "Yo mismo"
-msgstr ""
+msgstr "Myself"
 
 #: models.py:34
 msgid "Mi asistente/secretaria"
-msgstr ""
+msgstr "My assistant/secretary"
 
 #: models.py:35
 msgid "Mi jefe/supervisor"
-msgstr ""
+msgstr "My boss/supervisor"
 
 #: models.py:39
 msgid ""
 "Aproximadamente, ¿Cuánto tiempo le dedicas diariamente a organizar tus "
 "documentos y tu agenda?"
 msgstr ""
+"Approximately, how much time does it take you to organize your documents and "
+"your schedule everyday?"
 
 #: models.py:40
 msgid "¿Quién gestiona principalmente tu agenda?"
-msgstr ""
+msgstr "Who manages your schedule?"
 
 #: models.py:41
 msgid ""
 "¿Utilizas o has utilizado alguna herramienta informática que te ayude a "
 "gestionar tu práctica (tiempos, expedientes, etc.)?"
 msgstr ""
+"Do you currently use, or have you ever used, any computer tool to help you "
+"manage your practice (times, files, records, etc.)?"
 
 #: models.py:42
 msgid "En caso afirmativo, ¿Cúal(es)?"
-msgstr ""
+msgstr "If affirmative, which?"
 
 #: models.py:43
 msgid "¿Cuál dirías que es la principal deficiencia de estos sistemas?"
-msgstr ""
+msgstr "What would you say is the main drawback of these systems?"
 
 #: models.py:44
 msgid "Si pudieras automatizar cualquier aspecto de tu trabajo, ¿cuál sería?"
-msgstr ""
+msgstr "If you could automate any aspect of your job, what would it be?"
 
 #: models.py:45
 msgid "¿De qué forma sueles facturar tu trabajo?"
-msgstr ""
+msgstr "How do you usually charge for your work?"
 
 #: models.py:46
 msgid ""
 "¿Tienes control efectivo del tiempo/dinero que inviertes en cada cliente?"
 msgstr ""
+"Do you have effective control of the time/money you invest in every client?"
 
 #: models.py:47
 msgid "¿Cuántos abogados trabajan en tu despacho?"
-msgstr ""
+msgstr "How many lawyers work at your firm?"
 
 #: models.py:48
 msgid ""
 "¿Te parecería valioso poder visualizar gráficamente el estado de tus asuntos?"
 msgstr ""
+"Would you find it valuable to be able to graphically visualize the status of "
+"your cases?"
 
 #: models.py:54
 msgid "Visita"
-msgstr ""
+msgstr "Visit"
 
 #: models.py:55
 msgid "Visitas"
-msgstr ""
+msgstr "Visits"
 
 #: models.py:83
 msgid "Contacto"
-msgstr ""
+msgstr "Contact"
 
 #: models.py:84
 msgid "Contactos"
-msgstr ""
+msgstr "Contactos"
 
 #: templates/poll.html:4
 msgid "Encuesta"
-msgstr ""
+msgstr "Poll"
 
 #: templates/poll.html:11
+msgid "Idioma"
+msgstr "Language"
+
+#: templates/poll.html:34
 msgid "¡Gracias por estar aquí!"
-msgstr ""
+msgstr "Thanks for being here!"
 
-#: templates/poll.html:13
+#: templates/poll.html:36
 msgid "Necesitamos sólo un minuto de tu tiempo"
-msgstr ""
+msgstr "We only need a minute of your time"
 
-#: templates/poll.html:14
+#: templates/poll.html:37
 msgid "Queremos"
-msgstr ""
+msgstr "We want"
 
-#: templates/poll.html:14
+#: templates/poll.html:37
 msgid ""
 " conocer cuales son los principales problemas que afectan el desempeño de "
 "los profesionales del derecho."
 msgstr ""
+" to know what are the main problems affecting the performance of law "
+"professionals."
 
-#: templates/poll.html:16
+#: templates/poll.html:39
 msgid "Creemos"
-msgstr ""
+msgstr "We believe"
 
-#: templates/poll.html:16
+#: templates/poll.html:39
 msgid ""
 " que haciendo uso de la tecnología podemos proporcionar herramentas "
 "innovadoras que te ayuden a resolverlos"
 msgstr ""
+" that using technology we can provide innovative tools that will help you "
+"solve them"
 
-#: templates/poll.html:18
+#: templates/poll.html:41
 msgid "Te aseguramos que esta encuesta es "
-msgstr ""
+msgstr "We assure you that this poll is "
 
-#: templates/poll.html:19
+#: templates/poll.html:42
 msgid "completamente anónima"
-msgstr ""
+msgstr "completely anonymous"
 
-#: templates/poll.html:22
+#: templates/poll.html:45
 msgid "Tu aporte es increíblemente "
-msgstr ""
+msgstr "Your input is incredibly "
 
-#: templates/poll.html:22
+#: templates/poll.html:45
 msgid "valioso"
-msgstr ""
+msgstr "valuable"
 
-#: templates/poll.html:22
+#: templates/poll.html:45
 msgid " para nosotros."
-msgstr ""
+msgstr " to us."
 
-#: templates/poll.html:25
+#: templates/poll.html:48
 msgid "No es necesario que contestes todas las preguntas."
-msgstr ""
+msgstr "It's not necessary that you answer all the questions."
 
-#: templates/poll.html:32
+#: templates/poll.html:55
 msgid "Debes corregir uno de los campos de la encuesta"
-msgstr ""
+msgstr "There's a problem with one of your entries"
 
-#: templates/poll.html:106
+#: templates/poll.html:129
 msgid "Enviar "
-msgstr ""
+msgstr "Send "
 
 #: templates/registered.html:5
 msgid "Registrado"
-msgstr ""
+msgstr "Registered"
 
 #: templates/registered.html:11
 msgid "Hemos registrado tu dirección de correo exitosamente"
-msgstr ""
+msgstr "We have succesfully stored your address"
 
 #: templates/registered.html:12
 msgid ""
 "No te enviaremos spam ni facilitaremos tu correo a ningun tercero, lo "
 "juramos."
 msgstr ""
+"We will not send you spam or provide your address to any third party, we "
+"swear."
 
 #: templates/status.html:5
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: templates/status.html:11
 msgid "Status: "
-msgstr ""
+msgstr "Status: "
 
 #: templates/status.html:11
 msgid "En desarrollo"
-msgstr ""
+msgstr "In development"
 
 #: templates/status.html:12
 msgid "Muchas gracias por tu interés."
-msgstr ""
+msgstr "Thanks a lot for your interest."
 
 #: templates/thanks.html:5
 msgid "Gracias"
-msgstr ""
+msgstr "Thank you"
 
 #: templates/thanks.html:11
 msgid "¡Gracias por participar!"
-msgstr ""
+msgstr "Thanks for participating!"
 
 #: templates/thanks.html:13
 msgid ""
-"Si te interesa, y en caso de que nuestra iniciativa resulte en un proyecto "
+"Si te interesa, y en caso de que nuestra iniciativa resulte en un producto "
 "que resuelva algunas de las inquitudes que nos planteaste, nos gustaría "
 "poder contactarte."
 msgstr ""
+"If you are interested, and in case that our initiative results in a product "
+"that solves some of the needs that you have, we would like to be able to "
+"contact you."
 
 #: templates/thanks.html:15
 msgid "Para eso tenemos tres opciones:"
-msgstr ""
+msgstr "We offer three choices for that:"
 
 #: templates/thanks.html:18
 msgid ""
@@ -250,28 +270,33 @@ msgid ""
 "escribiremos una vez en caso de que el proyecto despegue y que nunca lo "
 "facilitaremos a ningún tercero)."
 msgstr ""
+"You can give us your e-mail address (we promise that we will only use it "
+"once in case that our project takes off and that we will never release it to "
+"any third party)."
 
 #: templates/thanks.html:26
 msgid "Enviar"
-msgstr ""
+msgstr "Send"
 
 #: templates/thanks.html:30
-#, python-format
 msgid ""
 "Te puedes subscribir a la cuenta de twitter @psidium_project y asi "
 "mantendrás el control de tu comunicación con nosotros. De nuevo, sólo "
 "utilizaremos esta cuenta para anunciar el lanzamiento de nuestro proyecto: "
-"0%% Spam."
+"0% Spam."
 msgstr ""
+"You can follow @psidium_project in twitter and way you will maintain control "
+"over our communication with you. Again, we will only use this account to "
+"announce the launch of our product. 0% Spam."
 
 #: templates/thanks.html:33
 msgid "Puedes añadir la página "
-msgstr ""
+msgstr "You can add the page "
 
 #: templates/thanks.html:35
 msgid ""
 " a tus favoritos y revisarla de vez en cuando para saber el status de "
 "nuestra iniciativa."
 msgstr ""
-" to your favorites and check it every now and then to know the status of "
-"our initiative."
+" to your favorites and check it every now and then to know the status of our "
+"initiative."
