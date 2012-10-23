@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-22 19:38+0200\n"
+"POT-Creation-Date: 2012-10-22 20:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -143,8 +143,8 @@ msgid "Encuesta"
 msgstr "Poll"
 
 #: templates/poll.html:11
-msgid "Idioma"
-msgstr "Language"
+msgid "Change Language"
+msgstr "Cambiar Idioma"
 
 #: templates/poll.html:34
 msgid "¡Gracias por estar aquí!"
@@ -300,3 +300,6 @@ msgid ""
 msgstr ""
 " to your favorites and check it every now and then to know the status of our "
 "initiative."
+
+#~ msgid "Idioma"
+#~ msgstr "Language"
