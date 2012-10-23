@@ -16,9 +16,11 @@ def index(request):
             if form.has_changed():
                 visit = form.save(commit=False)
                 ip_address = request.META['REMOTE_ADDR']
+                referer = request.META['HTTP_REFERER']
                 response = loads(urlopen('http://api.hostip.info/get_json.php?ip=' + ip_address).read())
                 country = response['country_name']
                 city = response['city']
+                visit.referer = referer
                 visit.country = country
                 visit.city = city
                 visit.save()

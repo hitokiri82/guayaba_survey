@@ -53,7 +53,7 @@ class Visit(models.Model):
     class Meta:
         verbose_name = _('Visita')
         verbose_name_plural = _('Visitas')
-
+    referer = models.CharField(max_length=2083, blank=True, null=True)
     created_date = models.DateTimeField(auto_now_add=True)
     country = models.TextField()
     city = models.TextField()
@@ -75,7 +75,7 @@ class Visit(models.Model):
 class VisitForm(ModelForm):
     class Meta:
         model = Visit
-        exclude = ('ip_address', 'country', 'city', )
+        exclude = ('referer', 'country', 'city', )
 
 
 class Contact(models.Model):
