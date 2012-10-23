@@ -16,7 +16,10 @@ def index(request):
             if form.has_changed():
                 visit = form.save(commit=False)
                 ip_address = request.META['REMOTE_ADDR']
-                referer = request.META['HTTP_REFERER']
+                if 'referer' in request.session:
+                    referer = request.session['referer']
+                else:
+                    referer = None
                 response = loads(urlopen('http://api.hostip.info/get_json.php?ip=' + ip_address).read())
                 country = response['country_name']
                 city = response['city']
@@ -29,6 +32,8 @@ def index(request):
             print form.errors
     else:
         form = VisitForm()  # An unbound form
+        if 'HTTP_REFERER' in request.META:
+            request.session['referer'] = request.META['HTTP_REFERER']
     return render_to_response('poll.html', {'form': form, }, context_instance=RequestContext(request))
 
 
