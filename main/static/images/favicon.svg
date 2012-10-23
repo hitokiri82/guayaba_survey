@@ -14,7 +14,10 @@
    inkscape:version="0.48.3.1 r9886"
    width="22"
    height="22"
-   sodipodi:docname="favicon.svg">
+   sodipodi:docname="favicon.svg"
+   inkscape:export-filename="/home/pakiko/django/guayaba_survey/main/static/images/avatar.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <metadata
      id="metadata3077">
     <rdf:RDF>
@@ -23,6 +26,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
