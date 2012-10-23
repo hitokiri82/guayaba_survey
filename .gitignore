@@ -8,5 +8,4 @@ survey.db
 /survey/collected_static.env
 .env
 survey/collected_static/
-main/locale/en/LC_MESSAGES/django.mo
 
