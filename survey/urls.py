@@ -12,9 +12,10 @@ urlpatterns = patterns('',
     # url(r'^survey/', include('survey.foo.urls')),
     #url(r'^survey/$', 'main.views.index'),
     url(r'^$', 'main.views.index'),
-    url(r'^thanks/', 'main.views.thanks'),
-    url(r'^registered/', 'main.views.registered'),
-    url(r'^status/', 'main.views.status'),
+    url(r'^poll/$', 'main.views.poll'),
+    url(r'^thanks/$', 'main.views.thanks'),
+    url(r'^registered/$', 'main.views.registered'),
+    url(r'^status/$', 'main.views.status'),
 
 
     # Uncomment the admin/doc line below to enable admin documentation:

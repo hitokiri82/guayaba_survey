@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}
+    "Psidium Project
+{% endblock title %}
+
+{% block contents %}
+
+<div class="hero-unit hero-transparent">
+
+    <h1>{% trans "Bienvenido" %}</h1>
+
+    <h2 style="color: #DC9B31;">{% trans "Queremos revolucionar la manera como se gestionan los pequeños y medianos despachos de abogados" %}</h2>
+
+    <p> {% trans "El sistema que estamos diseñando, busca conseguir este objetivo y estos son los principios que guían nuestro trabajo:" %}
+    </p>
+    <ul>
+        <li> {% trans "Tus datos deben estar contigo donde sea y cuando sea, en la web, en el móvil, en la oficina, en la casa, en la tarde, en la mañana. Tus datos en la punta de tus dedos." %} </li>
+        <li> {% trans "Tu trabajo y el de tus compañeros genera un montón de información la cual hoy en día es difícil de obtener y visualizar. Por ejemplo: Cuál es el promedio de casos con resultado positivo en tu despacho en los últimos cinco años?, Cuál tipo de casos resultan mas rentables para ti y tu oficina?, Cuáles de tus clientes te resultan más rentables?. Esta informacion está ahí, sólo necesitas los recursos necesarios para extraerla. Creemos que todas las oficinas, independientemente de su tamaño deberían poder disfrutar de esta ventaja" %} </li>
+        <li> {% trans "Con el apoyo de la tecnología, no se justifica que ningún profesional tenga que perder una parte importante de su tiempo y energía llevando en su mente el control de los eventos importantes de su práctica. Queremos que puedas confiar en nuestra herramienta para llevar de forma automatizada el control de los tiempos, plazos, citas y todos aquellos elementos que representan el día a día de tu trabajo." %} </li>
+    </ul>
+    <hr>
+    <p>{% trans "Si tienes un minuto, nos gustaría saber tu opinión respecto a algunos de los principales retos tecnológicos de una oficina legal:" %} </p>
+    <a href="{% url main.views.poll %}" class="btn btn-large btn-primary">Ir a la encuesta »</a>
+</div>
+
+
+
+{% endblock contents %}

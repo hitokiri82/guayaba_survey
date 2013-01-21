@@ -9,3 +9,4 @@ survey.db
 .env
 survey/collected_static/
 
+fvenv

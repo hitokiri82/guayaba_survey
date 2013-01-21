@@ -2,7 +2,7 @@
 	"folders":
 	[
 		{
-			"path": "/home/pakiko/django/guayaba_survey",
+			"path": "/media/DATA/Projects/django/guayaba_survey",
             // "folder_exclude_patterns": ["venv"],
             "file_exclude_patterns": ["*.sublime-project","*.sublime-workspace"]
 		}

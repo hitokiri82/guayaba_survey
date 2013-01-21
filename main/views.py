@@ -9,6 +9,10 @@ from main.models import VisitForm, ContactForm
 
 
 def index(request):
+    return render_to_response('index.html', {}, context_instance=RequestContext(request))
+
+
+def poll(request):
     # print request.META['HTTP_ACCEPT_LANGUAGE']
     if request.method == 'POST':  # If the form has been submitted...
         form = VisitForm(request.POST)  # A form bound to the POST data
